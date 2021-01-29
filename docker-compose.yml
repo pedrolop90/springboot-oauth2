@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  springboot-oauth2:
+    build: ./
+    image: springboot-oauth2:1.0
+    ports:
+      - 8080:8080

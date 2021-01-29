@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: security_oauth2
+  profiles:
+    active: dev

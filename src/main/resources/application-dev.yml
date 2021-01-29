@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+oauth2:
+  seguridad:
+    keySecret: ${keySecret_seguridad:asdasdasdasdasdasdasdasdasdas}
