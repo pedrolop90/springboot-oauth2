@@ -1,5 +1,7 @@
-# springboot-oauth2
+# SpringBoot-oauth2
 Proyecto para el manejo de autenticación y autorización de recursos de un servicio.
+
+![Imagen del flujo de oauth2](https://uploads.toptal.io/blog/image/129096/toptal-blog-image-1549493352154-d8593c1d09444018667fd89566010f57.png)
 
 ### Ejecución
 Podemos iniciar la ejecución del proyecto de dos maneras:
@@ -42,7 +44,7 @@ Podemos iniciar la ejecución del proyecto de dos maneras:
           Correcto, esta funcionando bien.
         - 403: Vamos a probar el acceso a un recurso que no
           tenemos acceso, entramos a la siguiente 
-          url <localhost:8080/personas> y la accion **GET**,
+          url <localhost:8080/personas/admin> y la accion **GET**,
           en este caso la salida deberia ser:
             ```json
             {
