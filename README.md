@@ -57,4 +57,4 @@ Podemos Ejecutar del proyecto de dos formar:
 Como comprobamos tenemos acceso a ciertos
 recursos, por medio de la especificacion oauth2
 implementada en SpringBoot.
->> "Todo es posible con la suficiente disciplina y dedicación"
+>> "Todo se puede aprender con la suficiente disciplina y dedicación"
