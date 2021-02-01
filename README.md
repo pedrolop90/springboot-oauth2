@@ -8,8 +8,10 @@ Podemos Ejecutar del proyecto de dos formar:
 - Docker: Ya está preparado un
   docker-compose para ejecutarlo con el comando
   **docker-compose -d up**.
-- Gradle: Podemos ejecutarlo directamente con el comando
-  "gradle run".
+- Gradle: usando con el comando "gradle run".
+- Release: Esta preprado un release, para descargar y
+  ejecutar con el comando
+  **java -jar security-oauth2-0.0.1-SNAPSHOT.jar**
   
 ### Pruebas
 
