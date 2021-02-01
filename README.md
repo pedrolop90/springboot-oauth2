@@ -5,22 +5,23 @@ Proyecto para el manejo de autenticación y autorización de recursos de un serv
 
 ### Ejecución
 Podemos Ejecutar del proyecto de dos formar:
-- Docker: Ya esta preparado un
-  docker-compose para ejecutar el proyecto de
-  manera facil con el comando **docker-compose -d up**.
-- Gradle: Podemos ejecutarlo directamente con gradle
-  con el comando "gradle run".
+- Docker: Ya está preparado un
+  docker-compose para ejecutarlo con el comando
+  **docker-compose -d up**.
+- Gradle: Podemos ejecutarlo directamente con el comando
+  "gradle run".
   
 ### Pruebas
 
 - #### Dependencias
     Para poder probar el funcionamiento correcto de oauth2
-    debemos tener postman o algun client http disponible.
+    debemos tener postman o algún cliente http disponible.
 
 - #### Guia de Pruebas
     1.  Autenticación:
+        Probaremos ingresando a la siguiente url
        *<http://localhost:8080/oauth/token?grant_type=client_credentials&client_id=client_read&client_secret=1234567890>*
-       y la accion **POST** obtendremos el token para acceder a los recursos
+       y la acción **POST** obtendremos el token para acceder a los recursos
        que hemos definido para ese scope, la salida seria
        muy similar a la siguiente:
         ```json
