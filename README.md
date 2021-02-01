@@ -1,14 +1,14 @@
-# SpringBoot-oauth2
+# SpringBoot Oauth2
 Proyecto para el manejo de autenticación y autorización de recursos de un servicio.
 
 ![Imagen del flujo de oauth2](https://uploads.toptal.io/blog/image/129096/toptal-blog-image-1549493352154-d8593c1d09444018667fd89566010f57.png)
 
 ### Ejecución
-Podemos iniciar la ejecución del proyecto de dos maneras:
-- Podemos usar docker, ya tengo preparado un
+Podemos Ejecutar del proyecto de dos formar:
+- Docker: Ya esta preparado un
   docker-compose para ejecutar el proyecto de
   manera facil con el comando **docker-compose -d up**.
-- Tambien podemos ejecutarlo directamente con gradle
+- Gradle: Podemos ejecutarlo directamente con gradle
   con el comando "gradle run".
   
 ### Pruebas
@@ -18,7 +18,7 @@ Podemos iniciar la ejecución del proyecto de dos maneras:
     debemos tener postman o algun client http disponible.
 
 - #### Guia de Pruebas
-    1.  Authenticación:
+    1.  Autenticación:
        <http://localhost:8080/oauth/token?grant_type=client_credentials&client_id=client_read&client_secret=1234567890>
        y la accion **POST** obtendremos el token para acceder a los recursos
        que hemos definido para ese scope, la salida seria
@@ -33,18 +33,18 @@ Podemos iniciar la ejecución del proyecto de dos maneras:
         }
         
         ```
-    2. Authorización:
-        - 200: Vamos a probar el acceso a un recurso que si
-          tenemos acceso, entramos a la siguiente 
-          url <localhost:8080/personas> y la accion **GET**,
+    2. Autorización:
+        - 200: Probaremos el acceso a un recurso con permisos,
+          ingresando a la siguiente 
+          url *<localhost:8080/personas>* y la acción **GET**,
           en este caso la salida deberia ser:
             ```json
             Hola Persona!!
             ```
           Correcto, esta funcionando bien.
-        - 403: Vamos a probar el acceso a un recurso que no
-          tenemos acceso, entramos a la siguiente 
-          url <localhost:8080/personas/admin> y la accion **GET**,
+        - 403: Probaremos el acceso a un recurso sin permisos,
+          ingresando a la siguiente 
+          url *<localhost:8080/personas/admin>* y la acción **GET**,
           en este caso la salida deberia ser:
             ```json
             {
@@ -54,7 +54,7 @@ Podemos iniciar la ejecución del proyecto de dos maneras:
             ```
           Correcto esta funcionando bien.
 
-Como pudemos comprobar podemos tener acceso a ciertos
-recursos y a otros no, por medio de la especificacion oauth2
+Como comprobamos tenemos acceso a ciertos
+recursos, por medio de la especificacion oauth2
 implementada en SpringBoot.
 >> "Todo es posible con la suficiente disciplina y dedicación"
