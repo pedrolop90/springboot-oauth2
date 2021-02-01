@@ -19,7 +19,7 @@ Podemos Ejecutar del proyecto de dos formar:
 
 - #### Guia de Pruebas
     1.  Autenticación:
-       <http://localhost:8080/oauth/token?grant_type=client_credentials&client_id=client_read&client_secret=1234567890>
+       *<http://localhost:8080/oauth/token?grant_type=client_credentials&client_id=client_read&client_secret=1234567890>*
        y la accion **POST** obtendremos el token para acceder a los recursos
        que hemos definido para ese scope, la salida seria
        muy similar a la siguiente:
