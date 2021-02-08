@@ -22,10 +22,10 @@ jobs:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
           args: set image --record deployment/spring-oauth2-deployment container=${{ secrets.DOCKERHUB_REPOSITORY }}:${{ github.sha }}
-        - name: verify deployment
-          uses: steebchen/kubectl@master
-          env:
-            KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
-            KUBECTL_VERSION: "1.15"
-          with:
-            args: '"rollout status deployment/spring-oauth2-deployment"'
+      - name: verify deployment
+        uses: steebchen/kubectl@master
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+          KUBECTL_VERSION: "1.15"
+        with:
+          args: '"rollout status deployment/spring-oauth2-deployment"'
