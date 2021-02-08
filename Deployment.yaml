@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: dev
+  name: spring-oauth2-deployment
+  labels:
+    app: spring-oauth2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-oauth2
+  template:
+    metadata:
+      namespace: dev
+      labels:
+        app: spring-oauth2
+    spec:
+      containers:
+        - name: spring-quinto
+          image: pedrolop90/spring-oauth2:1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DEFAULT_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: oauth2-configmap
+                  key: defaultPort
+            - name: KEYSECRET_SECURITY
+              valueFrom:
+                secretKeyRef:
+                  name: oauth2-secret
+                  key: keySecret
