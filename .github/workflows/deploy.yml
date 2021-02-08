@@ -8,7 +8,7 @@ jobs:
       - name: bajar codigo al servidor
         uses: actions/checkout@master
       - name: construir y subir a dockerhub
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
