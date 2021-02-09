@@ -16,6 +16,12 @@ jobs:
           tag_with_ref: true
           tag_with_sha: true
           tags: ${{ github.sha }}
+      - name: use Deployment if not exists
+        uses: steebchen/kubectl@master
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
+        with:
+          args: kubectl get deployment spring-oauth2-deployment | tail -n +2 && kubectl apply -f Deployment.yaml
       - name: deploy to cluster
         uses: steebchen/kubectl@master
         env:
